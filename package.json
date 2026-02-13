@@ -1,0 +1,32 @@
+{
+  "name": "pharmasmart-ai-management",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:win": "vite build && electron-builder --windows"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "@google/generative-ai": "^0.21.0"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0",
+    "electron": "^33.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.pharma.smart",
+    "win": {
+      "target": "portable"
+    },
+    "files": [
+      "dist/**/*",
+      "main.js"
+    ]
+  }
+}
